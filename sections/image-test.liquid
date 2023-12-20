@@ -1,0 +1,26 @@
+{% if section.settings.text != blank %}
+<h1>{{ section.settings.text }}</h1>
+{% endif %}
+
+{% schema %}
+    {
+      "name": "Image Test",
+      "tag": "section",
+      "class": "section",
+      "disabled_on": {
+        "groups": ["header", "footer"]
+      },
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Add Text"
+        }
+      ],
+           "presets": [
+        {
+          "name": "Image Test"
+                 }
+      ]
+    }
+    {% endschema %}
